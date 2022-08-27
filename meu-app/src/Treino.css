@@ -1,4 +1,46 @@
-.container{
-    margin: auto;
-    max-width: 900px;
-}
+
+form {
+    height: 150vh;
+    width: 100vw;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .idade{
+    height: 5vh;
+    width: 8vw;
+  }
+  img {
+    max-width: 300px;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    border-radius: 5px;
+    border: 1px solid gray;
+    height: 25px;
+    width: 300px;
+  }
+  
+  button {
+    width: 300px;
+    height: 40px;
+    background-color: rgb(255, 149, 0);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  span {
+    color: red;
+    position:absolute;
+    margin-top: 50px;
+  }
