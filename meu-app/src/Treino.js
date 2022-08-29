@@ -1,11 +1,12 @@
 import React from "react";
 import FormLogo from './assets/logo-transformers.JPG';
 import Fieldage from "./componets/fieldage/Fieldage";
-import Form from 'react-bootstrap/Form';
+import  Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel';
+import SelectTreino from "./componets/select/SelectTreino";
 
 
 //import './Treino.css'
@@ -74,7 +75,9 @@ function Treino(){
                 <Fieldage format= "p3" value="" label="Altura (cm)" clName="altura"/>
             </Col>
         </Row>
-      
+        <SelectTreino>
+
+        </SelectTreino>
         {/* <Form.Select aria-label="Default select example">
             <option>Objetivo</option>
             <option value="1">Definição</option>
@@ -85,8 +88,10 @@ function Treino(){
             
             <button type="submit">Cadastrar</button>
         </Form>
+        
         </Container>
     );
+    
 }
 
 export default Treino;
