@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel';
 import SelectTreino from "./componets/select/SelectTreino";
-
+import ComponentSelect from "./componets/select/ComponentSelect";
 
 //import './Treino.css'
 
@@ -75,17 +75,21 @@ function Treino(){
                 <Fieldage format= "p3" value="" label="Altura (cm)" clName="altura"/>
             </Col>
         </Row>
-        <SelectTreino>
+        {/* <SelectTreino>
 
-        </SelectTreino>
-        {/* <Form.Select aria-label="Default select example">
-            <option>Objetivo</option>
-            <option value="1">Definição</option>
-            <option value="2">Hipertrofia</option>
-            <option value="3">Three</option>
-        </Form.Select> */}
+        </SelectTreino>  */}
         
-            
+        <ComponentSelect format="d1">
+
+        </ComponentSelect> 
+        <Form.Group>
+    <Form.Label>Status</Form.Label>
+    <Form.Control as="select">
+      <option>Active</option>
+      <option>Inactive</option>
+    </Form.Control>
+  </Form.Group>   
+
             <button type="submit">Cadastrar</button>
         </Form>
         
