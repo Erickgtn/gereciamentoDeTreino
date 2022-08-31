@@ -1,6 +1,5 @@
 import React from "react";
 import FormLogo from './assets/logo-transformers.JPG';
-//import Fieldage from "./componets/fieldage/Fieldage";
 import  Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -102,17 +101,6 @@ function Treino(){
         </Row>
         <br></br>
        
-        {/* <Row>
-            <Col>
-                <Fieldage format ="p2" value=""  label="Idade" clName="idade"/>
-            </Col>
-            <Col>
-                <Fieldage format= "p1" value=""  label="Peso (Kg)" clName="peso"/>
-            </Col>
-            <Col>
-                <Fieldage format= "p3" value="" label="Altura (cm)" clName="altura"/>
-            </Col>
-        </Row> */}
         {/* <SelectTreino>
 
         </SelectTreino>  */}
