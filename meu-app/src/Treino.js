@@ -18,6 +18,12 @@ import './Treino.css'
 
 
 function Treino(){
+    const onSubmit = (e)=>{
+        e.preventDefalt();
+        const data = {
+
+        }
+    }
     return(
         <Container >
             <Carousel>
@@ -42,7 +48,7 @@ function Treino(){
         <br></br>
         <Row>
             <Col>
-                <Form.Label htmlFor="inputName">Nome</Form.Label>
+                <Form.Label htmlFor="inputName" name="nome">Nome</Form.Label>
                 <Form.Control
                     type="text"
                     id="inputName"
@@ -74,6 +80,9 @@ function Treino(){
                     type="number"
                     id="inputIdade"                    
                 />
+            </Col>
+            <Col>
+                <CheckDias format="s1" clName="Sexo"></CheckDias>
             </Col>
             <Col>
                 <Form.Label htmlFor="inputPeso"clName="Peso">Peso(Kg)</Form.Label>
@@ -108,11 +117,12 @@ function Treino(){
 
         </SelectTreino>  */}
         <Row>
+        
             <Col>
                 <ComponentSelect format="d1" clName="Objetivo" type=""/>
             </Col>
             <Col>
-                <CheckDias value="" clName="DiaSemana"></CheckDias>
+                <CheckDias clName="DiaSemana"></CheckDias>
             </Col>
         </Row>
             
