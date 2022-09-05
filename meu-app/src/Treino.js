@@ -20,8 +20,10 @@ function Treino(){
     const onSubmit = (e)=>{
         e.preventDefalt();
         const data = {
-
+            nome:e.target.elements.nome.value,
+            sobrenome:e.target.element.sobrenome.value
         }
+        console.log(data);
     }
     return(
         <Container >
@@ -43,24 +45,25 @@ function Treino(){
                 </Carousel.Item>
             </Carousel>
 
-        <Form>
+        <Form onSubmit={onSubmit}>
         <br></br>
         <Row>
             <Col>
-                <Form.Label htmlFor="inputName" name="nome">Nome</Form.Label>
+                <Form.Label htmlFor="inputName" >Nome</Form.Label>
                 <Form.Control
                     type="text"
                     id="inputName"
+                    name="nome"
                     placeholder="Nome"
                 />
             </Col>
             <Col>
-                <Form.Label htmlFor="inputSobrenome">Sobrenome</Form.Label>
+                <Form.Label htmlFor="inputSobrenome" >Sobrenome</Form.Label>
                 <Form.Control
                     type="text"
                     id="inputSobrenome"
-                    placeholder="Sobrenome"
-                    
+                    name="sobreNome"
+                    placeholder="Sobrenome"  
                 />
             </Col>
             <Col>
@@ -69,6 +72,7 @@ function Treino(){
                     type="text"
                     id="inputSobrenome"
                     placeholder="email@example.com"
+                    name="email"
                     
                 />
             </Col>
