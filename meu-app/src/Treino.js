@@ -9,7 +9,7 @@ import SelectTreino from "./componets/select/SelectTreino";
 import ComponentSelect from "./componets/select/ComponentSelect";
 import CheckDias from "./componets/checkbox/CheckDias";
 import ButtonCadastro from "./componets/button/ButtonCadastro";
-
+import TextControlsExample from "./componets/textArea/TextArea";
 
 import './Treino.css'
 
@@ -44,12 +44,12 @@ function Treino(){
                     />
                 </Carousel.Item>
             </Carousel>
-
+            <img src='./assets/img-background.jpg' alt="Imagem Academia Fundo"/>
         <Form onSubmit={onSubmit}>
         <br></br>
-        <Row>
+        <Row    >
             <Col>
-                <Form.Label htmlFor="inputName" >Nome</Form.Label>
+                <Form.Label htmlFor="inputName" format="nome" >Nome</Form.Label>
                 <Form.Control
                     type="text"
                     id="inputName"
@@ -67,15 +67,15 @@ function Treino(){
                 />
             </Col>
             <Col>
-                <Form.Label htmlFor="inputEmail">Email</Form.Label>
+                <Form.Label htmlFor="inputEmail">Endereço de Email</Form.Label>
                 <Form.Control
                     type="text"
                     id="inputSobrenome"
                     placeholder="email@example.com"
                     name="email"
-                    
                 />
             </Col>
+            <br></br>
             <Row>
             <Col>
                 <Form.Label htmlFor="inputIdade"className="Idade">Idade</Form.Label>
@@ -118,6 +118,8 @@ function Treino(){
             </Col>
         </Row>
             
+        
+        <TextControlsExample></TextControlsExample>
             
      
         <br></br>
