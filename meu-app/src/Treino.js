@@ -84,9 +84,7 @@ function Treino(){
                     id="inputIdade"                    
                 />
             </Col>
-            <Col>
-                <CheckDias format="s1" clName="Sexo"></CheckDias>
-            </Col>
+            
             <Col>
                 <Form.Label htmlFor="inputPeso"clName="Peso">Peso(Kg)</Form.Label>
                 <Form.Control
@@ -109,9 +107,12 @@ function Treino(){
 
         </SelectTreino>  */}
         <Row>
-        
+            
             <Col>
                 <ComponentSelect format="d1" clName="Objetivo" type=""/>
+            </Col>
+            <Col>
+                <CheckDias format="s1" clName="Sexo"></CheckDias>
             </Col>
             <Col>
                 <CheckDias clName="DiaSemana"></CheckDias>
