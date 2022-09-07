@@ -13,14 +13,14 @@ import { useState } from "react";
 import './Treino.css'
 
 
-
-
 function Treino(){
     function cadastrarUsuario(e){
         e.preventDefalt()
         console.log(name)
-        console.log(`nome${name} foi cadastrado`)
+        console.log(name)
+        console.log(`nobreNome${sobrenome} foi cadastrado`)
     }
+    const[matricula,setMatricula] = useState()
     const[name,setName] = useState()
     const[sobrenome,setSobrenome] = useState()
 
@@ -47,18 +47,17 @@ function Treino(){
         <Form>
         <br></br>
         <Row>
-
-        <Col>
-            <Form.Label htmlFor="inputMatricula" format="matricula">Matricula</Form.Label>
-            <Form.Control
-                type="number"
-                id="inputMatricula"
-                name="matricula"
-                placeholder="123456"
-                value={name}
-                // onChange={(e)=> setMatricula(e.target.value)}
-            />
-        </Col>
+            <Col>
+                <Form.Label htmlFor="inputMatricula" format="matricula">Matricula</Form.Label>
+                <Form.Control
+                    type="number"
+                    id="inputMatricula"
+                    name="matricula"
+                    placeholder="123456"
+                    value={matricula}
+                    onChange={(e)=> setMatricula(e.target.value)}
+                />
+            </Col>
         </Row>
         <Row>
             <Col>
@@ -93,7 +92,8 @@ function Treino(){
                 />
             </Col>
             <br></br>
-            <Row>
+        </Row>
+        <Row>
             <Col>
                 <Form.Label htmlFor="inputIdade"className="Idade">Idade</Form.Label>
                 <Form.Control
@@ -116,11 +116,9 @@ function Treino(){
                     id="inputAltura"                    
                 />
             </Col>
-            </Row>
         </Row>
         <br></br>
         <Row>
-            
             <Col>
                 <ComponentSelect format="d1" className="Objetivo"/>
             </Col>
@@ -137,7 +135,7 @@ function Treino(){
             
      
         <br></br>
-            <ButtonCadastro onSubmit={cadastrarUsuario}></ButtonCadastro>
+            <ButtonCadastro onClick={cadastrarUsuario}></ButtonCadastro>
             <br></br>
         </Form>
         
