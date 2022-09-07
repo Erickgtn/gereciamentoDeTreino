@@ -3,14 +3,13 @@ import Form from 'react-bootstrap/Form';
 function CheckIDias(props) {
     if(props.format=="s1"){
         return(
-            <Form>
+            <div>
                 <label>Sexo</label>
                 {['radio'].map((type) => (
                     <div key={`inline-${type}`} className="mb-3">
                         <Form.Check
                             inline
                             label="M"
-                            checked
                             name="group1"
                             type={type}
                             id={`inline-${type}-1`}
@@ -21,16 +20,15 @@ function CheckIDias(props) {
                             value ="opção1"
                             name="group1"
                             type="radio"
-                            for="exampleRadios1"
                             id={`inline-${type}-2`}
                         />
                     </div>
                 ))}
-            </Form>
+            </div>
          );
     }
     return (
-    <Form>
+    <div>
     <label> Dias de treino por semana</label>
       {['radio'].map((type) => (
         <div key={`inline-${type}`} className="mb-3">
@@ -49,7 +47,6 @@ function CheckIDias(props) {
             value ="opção1"
             name="group1"
             type="radio"
-            for="exampleRadios1"
             id={`inline-${type}-2`}
           />
           <Form.Check
@@ -75,7 +72,7 @@ function CheckIDias(props) {
           />
         </div>
       ))}
-    </Form>
+    </div>
   );
 }
 
