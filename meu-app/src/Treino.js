@@ -69,7 +69,7 @@ function Treino(){
                     name="name"
                     placeholder="Nome"
                     value={name}
-                    // onChange={(e)=> setName(e.target.value)}
+                    onChange={(e)=> setName(e.target.value)}
                 />
             </Col>
             <Col>
@@ -80,7 +80,7 @@ function Treino(){
                     name="sobreNome"
                     placeholder="Sobrenome" 
                     value={sobrenome} 
-                    // onChange={(e)=> setSobrenome(e.target.value)}
+                    onChange={(e)=> setSobrenome(e.target.value)}
                 />
             </Col>
             <Col>
