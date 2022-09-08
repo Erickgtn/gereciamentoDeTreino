@@ -15,14 +15,23 @@ import './Treino.css'
 
 function Treino(){
     function cadastrarUsuario(e){
-        e.preventDefalt()
-        console.log(name)
-        console.log(name)
-        console.log(`nobreNome${sobrenome} foi cadastrado`)
+        e.preventDefault()
+        console.log(dados)
+        // console.log(name)
+        //console.log(`nomeNome ${sobrenome} foi cadastrado`)
     }
-    const[matricula,setMatricula] = useState()
-    const[name,setName] = useState()
-    const[sobrenome,setSobrenome] = useState()
+    const initDados = {"name":"","sobrenome":"", "group1":""}
+    const [dados,setDados] = useState(initDados)
+    const atualizaDados = (e)=>{
+        //dados[e.target.name] = e.target.value
+        //dados["sobrenome"] = e.target.value
+        setDados({...dados,[e.target.name] : e.target.value})
+        
+        console.log(e.target.name,e.target.value)
+    }
+    // const[matricula,setMatricula] = useState("")
+    // const[name,setName] = useState("")
+    // const[sobrenome,setSobrenome] = useState("")
 
     return(
         <Container >
@@ -44,7 +53,7 @@ function Treino(){
             </Carousel>
             <img src='./assets/img-background.jpg' alt="Imagem Academia Fundo"/>
         
-        <Form>
+        <Form onSubmit={cadastrarUsuario}>
         <br></br>
         <Row>
             <Col>
@@ -54,8 +63,8 @@ function Treino(){
                     id="inputMatricula"
                     name="matricula"
                     placeholder="123456"
-                    value={matricula}
-                    onChange={(e)=> setMatricula(e.target.value)}
+                   //value={dados.matricula}
+                    //onChange={(atualizaDados}
                 />
             </Col>
         </Row>
@@ -67,8 +76,8 @@ function Treino(){
                     id="inputName"
                     name="name"
                     placeholder="Nome"
-                    value={name}
-                    onChange={(e)=> setName(e.target.value)}
+                    value={dados.name}
+                    onChange={atualizaDados}
                 />
             </Col>
             <Col>
@@ -76,10 +85,10 @@ function Treino(){
                 <Form.Control   
                     type="text"
                     id="inputSobrenome"
-                    name="sobreNome"
+                    name="sobrenome"
                     placeholder="Sobrenome" 
-                    value={sobrenome} 
-                    onChange={(e)=> setSobrenome(e.target.value)}
+                    value={dados.sobrenome} 
+                    onChange={atualizaDados}
                 />
             </Col>
             <Col>
@@ -123,7 +132,7 @@ function Treino(){
                 <ComponentSelect format="d1" className="Objetivo"/>
             </Col>
             <Col>
-                <CheckDias format="s1" className="Sexo"></CheckDias>
+                <CheckDias format="s1" className="Sexo" onChange={atualizaDados}></CheckDias>
             </Col>
             <Col>
                 <CheckDias className="DiaSemana"></CheckDias>
@@ -135,7 +144,7 @@ function Treino(){
             
      
         <br></br>
-            <ButtonCadastro onClick={cadastrarUsuario}></ButtonCadastro>
+            <ButtonCadastro ></ButtonCadastro>
             <br></br>
         </Form>
         

@@ -12,6 +12,7 @@ function CheckIDias(props) {
                             label="M"
                             name="group1"
                             type={type}
+                            value="true"
                             id={`inline-${type}-1`}
                         />
                         <Form.Check
