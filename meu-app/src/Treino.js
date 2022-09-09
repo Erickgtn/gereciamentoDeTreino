@@ -20,7 +20,9 @@ function Treino(){
         // console.log(name)
         //console.log(`nomeNome ${sobrenome} foi cadastrado`)
     }
-    const initDados = {"name":"","sobrenome":"", "group1":""}
+    const initDados = {"matricula":"","name":"","sobrenome":"","group1":"",
+    "email":"","idade":"","peso":"","altura":""}
+
     const [dados,setDados] = useState(initDados)
     const atualizaDados = (e)=>{
         //dados[e.target.name] = e.target.value
@@ -63,8 +65,8 @@ function Treino(){
                     id="inputMatricula"
                     name="matricula"
                     placeholder="123456"
-                   //value={dados.matricula}
-                    //onChange={(atualizaDados}
+                    value={dados.matricula}
+                    onChange={atualizaDados}
                 />
             </Col>
         </Row>
@@ -98,6 +100,8 @@ function Treino(){
                     id="inputSobrenome"
                     placeholder="email@example.com"
                     name="email"
+                    value={dados.email}
+                    onChange={atualizaDados}
                 />
             </Col>
             <br></br>
@@ -107,7 +111,10 @@ function Treino(){
                 <Form.Label htmlFor="inputIdade"className="Idade">Idade</Form.Label>
                 <Form.Control
                     type="number"
-                    id="inputIdade"                    
+                    id="inputIdade"
+                    name="idade"  
+                    value={dados.idade}
+                    onChange={atualizaDados}                  
                 />
             </Col>
             
@@ -115,14 +122,20 @@ function Treino(){
                 <Form.Label htmlFor="inputPeso"className="Peso">Peso(Kg)</Form.Label>
                 <Form.Control
                     type="number"
-                    id="inputPeso"                    
+                    id="inputPeso"  
+                    name="peso"  
+                    value={dados.peso}
+                    onChange={atualizaDados}                   
                 />
             </Col>
             <Col>
                 <Form.Label htmlFor="inputAltura" className="Altura">Altura(cm)</Form.Label>
                 <Form.Control
                     type="number"
-                    id="inputAltura"                    
+                    id="inputAltura" 
+                    name="altura"  
+                    value={dados.altura}
+                    onChange={atualizaDados}                    
                 />
             </Col>
         </Row>
@@ -132,7 +145,7 @@ function Treino(){
                 <ComponentSelect format="d1" className="Objetivo"/>
             </Col>
             <Col>
-                <CheckDias format="s1" className="Sexo" onChange={atualizaDados}></CheckDias>
+                <CheckDias format="s1" className="Sexo" name="sexo" value={dados.sexo} onChange={atualizaDados}></CheckDias>
             </Col>
             <Col>
                 <CheckDias className="DiaSemana"></CheckDias>
