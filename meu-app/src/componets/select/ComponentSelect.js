@@ -1,12 +1,14 @@
-
+import React from "react";
 import Form from 'react-bootstrap/Form';
 
+
 function ComponentSelect(props) {
-  if(props.format=="d1"){
+
+if(props.format=="d1"){
     return(
       <Form.Group>
         <Form.Label>Objetivo</Form.Label>
-        <Form.Control as="select">
+        <Form.Control as="select" name="objetivo" onChange={props.funcao}>
           <option></option>
           <option>Definição</option>
           <option>Hipertrofia</option>

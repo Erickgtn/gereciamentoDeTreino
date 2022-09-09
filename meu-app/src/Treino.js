@@ -21,19 +21,13 @@ function Treino(){
         //console.log(`nomeNome ${sobrenome} foi cadastrado`)
     }
     const initDados = {"matricula":"","name":"","sobrenome":"","group1":"",
-    "email":"","idade":"","peso":"","altura":""}
+    "email":"","idade":"","peso":"","altura":"","sexo":""}
 
     const [dados,setDados] = useState(initDados)
     const atualizaDados = (e)=>{
-        //dados[e.target.name] = e.target.value
-        //dados["sobrenome"] = e.target.value
         setDados({...dados,[e.target.name] : e.target.value})
-        
         console.log(e.target.name,e.target.value)
     }
-    // const[matricula,setMatricula] = useState("")
-    // const[name,setName] = useState("")
-    // const[sobrenome,setSobrenome] = useState("")
 
     return(
         <Container >
@@ -142,7 +136,7 @@ function Treino(){
         <br></br>
         <Row>
             <Col>
-                <ComponentSelect format="d1" className="Objetivo"/>
+                <ComponentSelect format="d1" className="Objetivo" funcao={atualizaDados}/>
             </Col>
             <Col>
                 <CheckDias format="s1" className="Sexo" name="sexo" value={dados.sexo} onChange={atualizaDados}></CheckDias>
