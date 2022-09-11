@@ -21,7 +21,7 @@ function Treino(){
         //console.log(`nomeNome ${sobrenome} foi cadastrado`)
     }
     const initDados = {"matricula":"","name":"","sobrenome":"","group1":"",
-    "email":"","idade":"","peso":"","altura":"","sexo":""}
+    "email":"","idade":"","peso":"","altura":"","sexo":"","diaSemana":""}
 
     const [dados,setDados] = useState(initDados)
     const atualizaDados = (e)=>{
@@ -139,10 +139,10 @@ function Treino(){
                 <ComponentSelect format="d1" className="Objetivo" funcao={atualizaDados}/>
             </Col>
             <Col>
-                <CheckDias format="s1" className="Sexo" name="sexo" value={dados.sexo} onChange={atualizaDados}></CheckDias>
+                <CheckDias format="s1" className="sexo" name="sexo" funcao={atualizaDados}></CheckDias>
             </Col>
             <Col>
-                <CheckDias className="DiaSemana"></CheckDias>
+                <CheckDias format="s2" className="DiaSemana" name="diaSemana" value={dados.diaSemana} onChange={atualizaDados}></CheckDias>
             </Col>
         </Row>
             
