@@ -43,13 +43,14 @@ function CheckIDias(props) {
               label="2 (disabled)"
               name="group1"
               type={type}
+              value="2"
               id={`inline-${type}-1`}
               
             />
             <Form.Check
               inline
               label="3"
-              value ="opção1"
+              value ="3"
               name="group1"
               type="radio"
               id={`inline-${type}-2`}
@@ -59,6 +60,7 @@ function CheckIDias(props) {
               label="4"
               name="group1"
               type="radio"
+              value="4"
               id={`inline-${type}-3`}
             />
             <Form.Check
@@ -66,11 +68,13 @@ function CheckIDias(props) {
               label="5"
               name="group1"
               type="radio"
+              value="5"
               id={`inline-${type}-3`}
             />
             <Form.Check
               inline
               label="6"
+              value="6"
               name="group1"
               type="radio"
               id={`inline-${type}-3`}

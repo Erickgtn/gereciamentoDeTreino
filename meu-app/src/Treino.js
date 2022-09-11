@@ -142,7 +142,7 @@ function Treino(){
                 <CheckDias format="s1" className="sexo" name="sexo" funcao={atualizaDados}></CheckDias>
             </Col>
             <Col>
-                <CheckDias format="s2" className="DiaSemana" name="diaSemana" value={dados.diaSemana} onChange={atualizaDados}></CheckDias>
+                <CheckDias format="s2" className="DiaSemana" name="diaSemana" value={dados.diaSemana} funcao={atualizaDados}></CheckDias>
             </Col>
         </Row>
             
