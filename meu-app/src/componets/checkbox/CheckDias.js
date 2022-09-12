@@ -6,12 +6,12 @@ function CheckIDias(props) {
             <div>
                 <label>Sexo</label>
                 {['radio'].map((type) => (
-                    <div key={`inline-${type}`}  onChange={props.funcao}>
+                    <div key={`inline-${type}`} >
                         <Form.Check
                             onChange={props.funcao}
                             inline
                             label="M"
-                            name="group1"
+                            name="sexo"
                             type={type}
                             value="M"
                             id={`inline-${type}-1`}
@@ -22,7 +22,7 @@ function CheckIDias(props) {
                             inline
                             label="F"
                             value ="F"
-                            name="group1"
+                            name="sexo"
                             type="radio"
                             id={`inline-${type}-2`}
                         />
