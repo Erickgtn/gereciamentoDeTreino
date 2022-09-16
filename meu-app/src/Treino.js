@@ -11,6 +11,7 @@ import ButtonCadastro from "./componets/button/ButtonCadastro";
 import TextControlsExample from "./componets/textArea/TextArea";
 import { useState } from "react";
 import './Treino.css'
+import Menu from "./componets/menu/Menu";
 
 
 function Treino(){
@@ -30,8 +31,12 @@ function Treino(){
     }
 
     return(
+        
         <Container >
+            <br></br>
+                    <Menu></Menu>
             <Carousel>
+                
                 <Carousel.Item>
                     <img
                     className="d-block w-100"
@@ -47,8 +52,8 @@ function Treino(){
                     />
                 </Carousel.Item>
             </Carousel>
-            <img src='./assets/img-background.jpg' alt="Imagem Academia Fundo"/>
-        
+
+           {/* <img src='./assets/img-background.jpg' alt="Imagem Academia Fundo"/> */}
         <Form onSubmit={cadastrarUsuario}>
         <br></br>
         <Row>
@@ -147,7 +152,7 @@ function Treino(){
         </Row>
             
         
-        <TextControlsExample></TextControlsExample>
+        {/* <TextControlsExample></TextControlsExample> */}
             
      
         <br></br>
